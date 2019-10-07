@@ -1,0 +1,38 @@
+Það sem er relevant fyrir verkefnið er:
+
+- GET /api/Delivery
+
+- Hver sendandi ætti eingöngu að geta séð sínar sendingar, þ.e. filtera á senderid.
+
+- Eins væri æskilegt að þegar businessKey er notað, að athuga hvort sendandi er ekki örugglega sá sem sendi sendinguna.
+
+- GET /api​/Delivery​/{businessKey}
+
+- GET /api​/Delivery​/{businessKey}/history
+
+- POST /api/Delivery
+
+- Hver sendandi ætti eingöngu að geta búið til sendingar á sitt senderId.
+
+- NB: location er hillustaðsetning og er eingöngu relevant þegar box == false
+
+- NB: það eru eingöngu þrjú hólf í boxinu sem er tengt við dev umhverfið og þetta er raunverulegt box og 
+það þarf manual intervention frá mér til að setja sendingar í boxið  þannig að ég mæli ekki með að nota box == true of oft. 
+Það er á döfinni að geta mockað þetta service, en það er ekki tilbúið enn.
+
+- GET /api/Delivery/{businessKey}/recipient
+
+- PATCH /api/Delivery/{businessKey}/recipient
+
+ 
+
+Hér ætti eingöngu að leyfa sender að skoða/breyta sjálfum sér.
+
+- Athugið að nöfn á sendendum eiga að vera einkvæm. Það á eftir að gera tékk á bakendanum til að tryggja einkvæmni. 
+Mátt gera ráð fyrir að það tékk komi á allra næstu dögum.
+
+- GET /api/Sender/{id}
+
+- POST /api/Sender 
+
+- PATCH /api/ Sender/{id}
